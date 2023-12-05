@@ -12,11 +12,17 @@ Berikut adalah demo laporan untuk praktikum modul 4
 Topologi yang digunakan untuk praktikum modul 4 adalah sebagai berikut.
 | <p align="center"> Topologi </p> |
 | -------------------------------------------- |
-| <img src="https://github.com/FadhlyABD/Jarkom-Modul-3-D30-2023/blob/main/Images/topologi.jpg" width = "400"/> |
+| <img src="https://github.com/FadhlyABD/Jarkom-Modul-4-D30-2023/blob/main/Images/topologi.png" width = "400"/> |
 
 
-## Nomor 0 & 1
-Setelah mengalahkan Demon King, perjalanan berlanjut. Kali ini, kalian diminta untuk melakukan register domain berupa riegel.canyon.yyy.com untuk worker Laravel dan granz.channel.yyy.com untuk worker PHP (0) mengarah pada worker yang memiliki IP [prefix IP].x.1. Lakukan konfigurasi sesuai dengan peta yang sudah diberikan.
+## Variable Length Subnet Masking (VLSM)
+Pada sesi ini kita akan membuat topologi kita pada Cisco Packet Tracer (CPT). Setelah membuat topologi, yang pertama kita lakukan selanjutnya adalah melakukan perhitungan untuk subnetting. Berikut langkah-langkahnya.
+
+### Subnetting
+- Lakukan pembagian untuk jumlah subnet yang ada pada topologi yang telah dibuat dan akan didapatkan pembagiannya sebagai berikut.
+![Alt text](Images/subnet.png)
+- Lakukan perhitungan terhadap jumah IP pada tiap-tiap subnet yang telah dibagi.
+![Alt text](Images/rute.jpg)
 
 **Penyelesaian**
 - Gunakan image docker `danielcristh0/debian-buster:1.1` untuk membuat project.
