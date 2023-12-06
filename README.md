@@ -86,3 +86,7 @@ Pada sesi ini kita akan membuat topologi kita pada Cisco Packet Tracer (CPT). Se
     ![Alt text](Images/rutelawine.png)
   - Heiter<br>
     ![Alt text](Images/ruteheiter.png)
+
+### Testing
+- Berikut adalah beberap bukti dari hasil ping antar node.<br>
+  ![Alt text](Images/outputroute.png)
