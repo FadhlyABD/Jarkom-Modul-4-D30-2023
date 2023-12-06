@@ -14,6 +14,9 @@ Topologi yang digunakan untuk praktikum modul 4 adalah sebagai berikut.
 | -------------------------------------------- |
 | <img src="https://github.com/FadhlyABD/Jarkom-Modul-4-D30-2023/blob/main/Images/topologi.png" width = "400"/> |
 
+## Subnet
+![Alt text](Images/netmask.png)
+
 
 ## Variable Length Subnet Masking (VLSM)
 Pada sesi ini kita akan membuat topologi kita pada Cisco Packet Tracer (CPT). Setelah membuat topologi, yang pertama kita lakukan selanjutnya adalah melakukan perhitungan untuk subnetting. Berikut langkah-langkahnya.
