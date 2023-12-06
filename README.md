@@ -30,9 +30,9 @@ Pada sesi ini kita akan membuat topologi kita pada Cisco Packet Tracer (CPT). Se
 - Pada pembagian subnet tercatat total ip adalah 4255 dan netmask yang cukup menampungnya adalah `/19` (menampung 8190 ip).
 - Sehingga root dari tree memiliki netmask `/19` dengan ip yang dimulai dari `192.206.0.0`.
 - Left child dari tree akan selalu menunjukkan awal mula dari ip yang tersedia, sedangkan right child adalah ip setelah ip left child.
-- Iterasi dilakukan terus menerus mulai dari netmask `/19` hingga `/30`
+- Iterasi dilakukan terus menerus mulai dari netmask `/19` hingga `/30`.
 - Sehingga pada akhirnya diperoleh pembagian IP dari tree VLSM tersebut sebagai berikut.
-![Alt text](Images/ipvlsm.png)
+![Alt text](Images/ipvlsm.jpg)
 
   1. Aura
   ```
