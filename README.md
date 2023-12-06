@@ -52,3 +52,37 @@ Pada sesi ini kita akan membuat topologi kita pada Cisco Packet Tracer (CPT). Se
   5. GranzChannel (Client)
      ![Alt text](Images/granzcpt.png)
 - Begitu juga untuk node yang lain menyocokkan dengan pembagian IP yang sudah dibagi sebelumnya.
+
+### Routing
+- Routing dilakukan dengan cara static dimana next hop dari routing adalah adjacent router terdekat dengan subnet yang ingin dituju.
+- Semisal Aura ingin berkenalan dengan subnet A1 maka NID dan netmask diisi milik A1 dan next-hop nya adalah Frieren.
+- Lakukan binding everywhere (0.0.0.0) pada router sesuai dengan yang ditandai dengan panah pada gambar dibawah ini.
+  ![Alt text](Images/conowntopo.png)
+- Kemudian untuk setiap router yang terhubung dengan router lain (next hop untuk berkenalan lebih dari 1 hop) yang memiliki host/client perlu mengenali subnet mereka juga.
+- Contoh:
+  - Flamme harus berkenalan dengan subnet A1 dan A14 <br>
+  - Frieren harus berkenalan dengan subnet A1, A4, A5, A9, A14<br>
+  - Aura harus berkenalan dengan semua subnet kecuali subnet A7, A8, A11<br>
+- Binding everywhere dari setiap router cukup 1 saja yang mengarah ke router Aura / terdekat dengan Aura, hal ini dilakukan untuk efisiensi routing.
+- Jika aura sudah disetup sebagaimana pengaturan routing di atas maka otomatis semua subnet bisa saling mengenal via Aura.
+- Berikut adalah config lengkap dari masing router.
+  - Frieren<br>
+    ![Alt text](Images/rutefrieren.png)
+  - Flamme<br>
+    ![Alt text](Images/ruteflamme.png)
+  - Fern<br>
+    ![Alt text](Images/rutefern.png)
+  - Himmel<br>
+    ![Alt text](Images/rutehimmel.png)
+  - Denken<br>
+    ![Alt text](Images/rutedenken.png)
+  - Eisen<br>
+    ![Alt text](Images/ruteeisen.png)
+  - Lugner<br>
+    ![Alt text](Images/rutelugner.png)
+  - Linie<br>
+    ![Alt text](Images/rutelinie.png)
+  - Lawine<br>
+    ![Alt text](Images/rutelawine.png)
+  - Heiter<br>
+    ![Alt text](Images/ruteheiter.png)
