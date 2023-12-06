@@ -90,3 +90,55 @@ Pada sesi ini kita akan membuat topologi kita pada Cisco Packet Tracer (CPT). Se
 ### Testing
 - Berikut adalah beberap bukti dari hasil ping antar node.<br>
   ![Alt text](Images/outputroute.png)
+
+
+## CIDR (Classless Inter Domain Routing)
+CIDR, atau Classless Inter-Domain Routing, adalah sebuah metode pengalamatan IP dan pengelompokan alamat IP untuk menggantikan sistem pengalamatan IP tradisional yang disebut sebagai kelas (Classful Network). CIDR diperkenalkan untuk mengatasi masalah pemborosan alamat IP yang terjadi dalam sistem kelas.
+
+## Topologi untuk GNS3 
+pada sesi CIDR topologi yang di gunakan adalah topologi menggunakn GNS3 yaitu : 
+![Alt text](Images/topocidr.png)
+
+Grouping Subnet : 
+
+![Alt text](Images/topocidr2.jpg)
+
+## Subnetting 
+- Pertama tama kita gambar bagian bagian jumlah subnet yang ada pada topologi yang telah dibuat dan akan didapatkan pembagiannya sebagai berikut.
+(poto)
+- Lakukan perhitungan terhadap jumah IP pada tiap-tiap subnet yang telah dibagi.
+	Penggabungan tingkat 1
+
+	![Alt text](Images/cidr1.png)
+
+	Penggabungan tingkat 2
+
+	![Alt text](Images/cidr2.png)
+
+	Penggabungan tingkat 3
+
+  	![Alt text](Images/cidr3.png)
+  
+  	Penggabungan tingkat 4
+
+  	![Alt text](Images/cidr4.png)
+  
+  	Penggabungan tingkat 5
+  
+  	![Alt text](Images/cidr5.png)
+  
+  	Penggabungan tingkat 6
+  
+  	![Alt text](Images/cidr6.png)
+  
+- Buat sebuah tree yang merepresentasikan pembagian ip dengan metode VLSM dari tiap-tiap subnet sebagaimana berikut.
+  
+	![Alt text](Images/hcidr.png)
+
+*Penjelasan*
+- Pada topologi Untuk melakukan perhitungan pada CIDR kita harus membagi bagi subnet mulai dari subnet yang paling bawah. Paling bawah berarti subnet yang paling jauh dari internet (gambar awan). Maka pada topologi yang digunakan, subnet yang dapat digabungkan adalah A1 dengan A2 dan subnet A7 dengan A8. Subnet yang digabung tersebut akan membentuk sebuah subnet lebih besar dari subnet-subnet kecil yang ada di dalamnya.  
+- Pada setiap bagian subnet memiliki netmask yaitu host dalam bagian subnet yang memiliki netmask yang lebih besar di naikan satu tingkat lebih besar, contoh pada Subnet `B1` yang mana terdiri dari subnet `A1` dan `A5` yang mana memiliki netmask masing masing yaitu `/21` dan `/30`, dikarenakan subnet yang yang terbesar adalah `A1` dengan netmask `/21` maka netmask nya `B1` adalah `/20`
+- Perbedaan antara pohon VLSM dengan pohon CIDR adalah ketika satu subnet diturunkan, netmask yang akan terbentuk disesuaikan dengan penggabungan subnet yang telah dilakukan sebelumnya.
+- Iterasi dilakukan terus menerus mulai dari netmask `/16` hingga `/30`
+- Sehingga pada akhirnya diperoleh pembagian IP dari tree VLSM tersebut sebagai berikut.
+![Alt text](Images/cidrper.png)
